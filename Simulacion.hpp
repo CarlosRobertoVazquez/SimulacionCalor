@@ -38,7 +38,7 @@ inline void calcularTemperatura(std::vector<double> &t_old, std::vector<double> 
                     t_new[centro] = (t_old[arriba] + t_old[abajo] + t_old[derecha] + t_old[izquierda]) / 4;
                 }
             }
-#pragma omp single nowait
+#pragma omp single 
             std::swap(t_old, t_new);
         }
     }
